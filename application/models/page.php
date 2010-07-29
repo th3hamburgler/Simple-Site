@@ -29,14 +29,14 @@ class Page extends DataMapper_Ext {
 			'class' => 'page',
             'other_field' => 'page'
 		),
-		'page_group',
+		//'page_group',
 		'site',
 		'template',
 	);
 	
 	// Insert related models that page can have more than one of.
 	var $has_many = array(
-		'meta',
+		//'meta',
 		'navigation_item',
 		'page_partial',
 		'page' => array(

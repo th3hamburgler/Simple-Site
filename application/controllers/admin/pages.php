@@ -10,11 +10,8 @@ class Pages extends SS_Admin_Controller {
 	*/
 	function index()
 	{	
-		// look for post request
-		if($this->input->post('delete_all'))
-		{
-			$this->oi->add_success('pages deleted');
-		}
+		// handle group post
+		$this->group_post_request();
 	
 		// get pages in site
 		$pages = $this->site->page->get();
@@ -54,6 +51,56 @@ class Pages extends SS_Admin_Controller {
 		}
 	
 		$this->load->view('admin/pages/index', $data);
+	}
+
+   /**
+	* Handles a group page post request
+	*
+	* An array of page ids are posted and deleted
+	*
+	* @access	private
+	* @return	void
+	*/
+	private function group_post_request()
+	{
+		// look for post request
+		if($this->input->post('delete_all'))
+		{
+			// get posted id arra
+			$ids = $this->input->post('ids');
+			
+			// check it is not empty
+			if(!empty($ids))
+			{
+				// create new page instance
+				$pages = new Page();
+				
+				// load posted pages
+				$pages->where_in('id', $ids)->get();
+			
+				// check they exists
+				if($pages->exists())
+				{
+					// attempt to delete page
+					if($pages->delete_all())
+					{
+						$this->oi->add_success(pluralise(count($ids), 'Page').' Deleted');
+					}
+					else
+					{
+						$this->oi->add_error('Error Deleting '.pluralise(count($ids), 'Page').': '.$pages->error->string);
+					}
+				}
+				else
+				{
+					$this->oi->add_warning('Could not find selected '.pluralise(count($ids), 'Page').' Already Deleted?');
+				}
+			}
+			else
+			{
+				$this->oi->add_warning('No pages selected to delete');
+			}
+		}
 	}
 
    /*
