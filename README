@@ -1,0 +1,14 @@
+SIMPLE SITE
+-----------
+A Simple Website Management Tool or CMS.
+
+Aimed at users with limited Web experience, this application will help them
+manage the content of their site while also restricting them to strict templates
+managed by the web developer/designer(s)
+
+Simple Site should not allow the user to get lost or screw up their site by unknowingly
+entering bad HTML. It will also help the user keep their site looking as good as 
+those original design visuals buy limiting their input. 
+
+If they really want a 'cool new page layout', back to the design brief we go as the
+designer/developer creates a new template to fit these need.
