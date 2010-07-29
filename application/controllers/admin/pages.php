@@ -24,6 +24,7 @@ class Pages extends SS_Admin_Controller {
 		
 			// define table columns
 			$columns = array(
+				'Delete' => 'checkbox_input',
 				'title',
 				'slug',
 				'updated',
