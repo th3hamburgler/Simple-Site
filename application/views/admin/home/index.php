@@ -10,7 +10,15 @@
 		
 		<div class="grid_10 alpha">
 		
-			<h3>Updates 0.1</h3>
+			<h4>Updates 0.11</h4>
+			
+			<h6>29/07/10</h6>
+		
+			<ol>
+				<li>Multiple <b>Pages</b> can now be deleted from <?=anchor('admin/pages/', 'List Page')?></b></li>
+			</ol>
+				
+			<h4>Updates 0.1</h4>
 			
 			<h6>23/07/10</h6>
 		
