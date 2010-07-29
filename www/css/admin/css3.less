@@ -1,0 +1,126 @@
+.v-list,
+.h-list {
+	list-style: none;
+	li {
+		list-style-position: outside;
+	}
+}
+.v-list {
+	li {
+		margin: 0;
+	}
+}
+
+.h-list {
+	li {
+		float: left;
+		margin: 0 10px 0 0;
+	}
+}
+
+
+.border (@color: @CA4){
+	border:									1px solid @color;
+}
+	.border-top (@color: @CA2){
+		border-top:							1px solid @color;
+	}
+	.border-right (@color: @CA2){
+		border-right:						1px solid @color;
+	}
+	.border-bottom (@color: @CA2){
+		border-bottom:						1px solid @color;
+	}
+	.border-left (@color: @CA2){
+		border-left:						1px solid @color;
+	}
+	.border-3d(@dark-color: @CA2, @light-color: @CA4)
+	{
+		.border(@dark-color);
+		.border-right(@light-color);
+		.border-bottom(@light-color);
+	}
+	
+.rounded-corners (@radius: 5px) {
+	-moz-border-radius:						@radius;
+	-webkit-border-radius:					@radius;
+	border-radius:							@radius;
+}
+	.rounded-corners-br (@radius: 5px) {
+		-moz-border-radius-bottomright:		@radius;
+		-webkit-border-bottom-right-radius:	@radius;
+		border-bottom-right-radius:			@radius;
+	}
+	.rounded-corners-bl (@radius: 5px) {
+		-moz-border-radius-bottomleft:		@radius;
+		-webkit-border-bottom-left-radius:	@radius;
+		border-bottom-left-radius:			@radius;
+	}
+	.rounded-corners-tl (@radius: 5px) {
+		-moz-border-radius-topleft:			@radius;
+		-webkit-border-top-left-radius:		@radius;
+		border-top-left-radius:				@radius;
+	}
+	.rounded-corners-tr (@radius: 5px) {
+		-moz-border-radius-topright: 		@radius;
+		-webkit-border-top-right-radius: 	@radius;
+		border-top-right-radius: 			@radius;
+	}
+	
+.text-shadow(@color: #FFF) {
+	text-shadow: 0 1px @color;
+}
+
+/* Background Gradient Classes */
+.bkg-grad(@top-color: #FFF, @bottom-color: #000)
+{
+	background-color: @top-color;
+	background-image: -moz-linear-gradient(top,@top-color,@bottom-color);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, @top-color),color-stop(1, @bottom-color));
+}
+
+.box-shadow(@color:#444, @x:0, @y:0, @blur:0) {
+     -moz-box-shadow: @x @y @blur @color; /* FF3.5+ */
+  -webkit-box-shadow: @x @y @blur @color; /* Saf3.0+, Chrome */
+          box-shadow: @x @y @blur @color; /* Opera 10.5, IE 9.0 */
+}
+
+/* turns an element into a button */
+.button {
+	.rounded-corners(3px);
+	.bkg-grad(#FFF, #DDD);
+	border: solid 1px #999;
+	color: #333;
+	cursor: pointer;
+	display: inline-block;	
+	font-size: 14px;
+	line-height: 1;
+	margin-bottom: 10px;		
+	padding: 6px 10px;
+	text-decoration: none;
+	text-align: center;
+	text-shadow: 0px 1px 1px rgba(255,255,255,1);	
+}
+
+.border (@color: #444){
+	border: 1px solid @color;
+}
+	.border-top (@color: #444){
+		border-top: 1px solid @color;
+	}
+	.border-right (@color: #444){
+		border-right: 1px solid @color;
+	}
+	.border-bottom (@color: #888){
+		border-bottom: 1px solid @color;
+	}
+	.border-left (@color: #888){
+		border-left: 1px solid @color;
+	}
+	.border-3d (@dark-color: #444, @light-color: #888)
+	{
+		.border(@dark-color);
+		.border-right(@light-color);
+		.border-bottom(@light-color);
+	}
+	

@@ -1,0 +1,89 @@
+@import "960/reset.css";
+
+@import "960/text.css";
+
+@import "960/960_24_col.css";
+.v-list, .h-list {
+  list-style: none;
+}
+.v-list li, .h-list li {
+  list-style-position: outside;
+}
+.v-list li {
+  margin: 0;
+}
+.h-list li {
+  float: left;
+  margin: 0 10px 0 0;
+}
+/* Background Gradient Classes */
+/* turns an element into a button */
+.button {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  background-image: -moz-linear-gradient(top, #ffffff, #dddddd);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #dddddd));
+  border: solid 1px #999;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 0px 1px 1px #ffffff;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
+.align-justify {
+  text-align: justify;
+}
+body {
+  background-color: #DDD;
+}
+.page-wrapper {
+  background-color: #FFF;
+  margin: 20px auto;
+  padding: 10px 0;
+  width: 1000px;
+}
+.nav ul {
+  list-style: none;
+}
+.nav ul li {
+  list-style-position: outside;
+}
+.nav ul li {
+  float: left;
+  margin: 0 10px 0 0;
+}
+.footer .footer-nav ul {
+  list-style: none;
+}
+.footer .footer-nav ul li {
+  list-style-position: outside;
+}
+.footer .footer-nav ul li {
+  float: left;
+  margin: 0 10px 0 0;
+}
+/*
+.content {
+	background-color: #FFF3F3;	
+}
+
+.zone {
+	background-color: #F3F3FF;
+}
+*/

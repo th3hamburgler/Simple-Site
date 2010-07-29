@@ -1,0 +1,84 @@
+form {
+	fieldset {
+		border: 1px solid #CCC;
+		padding: 10px;
+	}
+	label,
+	input,
+	textarea,
+	select {
+		display: block;
+	}
+	label {
+		color: #444;
+		font-size: 16px;
+		line-height: 20px;
+		margin: 0 0 5px;
+		padding: 0;
+		text-shadow: 0 1px 0 #FFF;
+	}
+	input[type=text],
+	input[type=password],
+	textarea,
+	select {		
+		margin: 0 0 10px;
+	}
+	
+	input[type=text],
+	input[type=password],
+	textarea {
+		border: 1px solid #888;
+		color: #444;
+		padding: 5px;
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: normal;
+	}
+	
+	input[type=text].small {
+		font-size: 12px;
+		line-height: 14px;
+		padding: 2px;
+	}
+	
+	.tooltip {
+		color: #444;
+		font-size: 12px;
+		font-style: italic;
+		line-height: 20px;		
+		text-shadow: 0 1px 0 #FFF;
+	}
+	.error {
+		background-color: #f01d24;
+		border-color: #c11d1d;
+		color: #FFF;
+		font-size: 12px;
+		font-style: italic;
+		padding: 5px;
+		line-height: 20px;		
+		text-shadow: 0 1px 0 #f01d24;
+	}
+}
+
+form.update-partial-form,
+form.update-nav-item-form {
+	fieldset {
+		label {
+			float: left;
+		}
+		input, .label {
+			float: right;
+		}
+		input[type=text] {
+			margin: 0 5px;
+		}
+		input[type=checkbox] {
+			margin: 5px 5px 0;
+		}
+		.label {
+			font-size: 12px;
+			line-height: 14px;
+			margin: 5px 0;
+		}
+	}
+}

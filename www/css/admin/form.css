@@ -1,0 +1,74 @@
+form fieldset {
+  border: 1px solid #CCC;
+  padding: 10px;
+}
+form label,
+form input,
+form textarea,
+form select {
+  display: block;
+}
+form label {
+  color: #444;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 0 5px;
+  padding: 0;
+  text-shadow: 0 1px 0 #FFF;
+}
+form input[type=text],
+form input[type=password],
+form textarea,
+form select {
+  margin: 0 0 10px;
+}
+form input[type=text], form input[type=password], form textarea {
+  border: 1px solid #888;
+  color: #444;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: normal;
+}
+form input[type=text].small {
+  font-size: 12px;
+  line-height: 14px;
+  padding: 2px;
+}
+form .tooltip {
+  color: #444;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 20px;
+  text-shadow: 0 1px 0 #FFF;
+}
+form .error {
+  background-color: #f01d24;
+  border-color: #c11d1d;
+  color: #FFF;
+  font-size: 12px;
+  font-style: italic;
+  padding: 5px;
+  line-height: 20px;
+  text-shadow: 0 1px 0 #f01d24;
+}
+form.update-partial-form fieldset label, form.update-nav-item-form fieldset label {
+  float: left;
+}
+form.update-partial-form fieldset input,
+form.update-nav-item-form fieldset input,
+form.update-partial-form fieldset .label,
+form.update-nav-item-form fieldset .label {
+  float: right;
+}
+form.update-partial-form fieldset input[type=text], form.update-nav-item-form fieldset input[type=text] {
+  margin: 0 5px;
+}
+form.update-partial-form fieldset input[type=checkbox], form.update-nav-item-form fieldset input[type=checkbox] {
+  margin: 5px 5px 0;
+}
+form.update-partial-form fieldset .label, form.update-nav-item-form fieldset .label {
+  font-size: 12px;
+  line-height: 14px;
+  margin: 5px 0;
+}
