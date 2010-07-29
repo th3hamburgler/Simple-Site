@@ -9,7 +9,13 @@ class Pages extends SS_Admin_Controller {
 	* @return	view
 	*/
 	function index()
-	{
+	{	
+		// look for post request
+		if($this->input->post('delete_all'))
+		{
+			$this->oi->add_success('pages deleted');
+		}
+	
 		// get pages in site
 		$pages = $this->site->page->get();
 		

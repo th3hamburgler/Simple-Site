@@ -10,7 +10,7 @@
 		
 			<?=$table?>
 			
-			<button type="submit" name="delete_all" class="button">Delete Checked</button>
+			<button type="submit" value="submit" name="delete_all" class="button">Delete Checked</button>
 			
 		</form>
 		
