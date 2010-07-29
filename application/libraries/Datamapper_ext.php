@@ -564,12 +564,14 @@ class DataMapper_ext extends DataMapper {
    /**
 	* Returns a html checkbox.
 	*
+	* Defaults to a field called ids with a value equaling the model id
+	*
 	* @access	public
 	* @param	string	- record field name to use as checkbox value
 	* @param	string	- name of checkbox suffixed with array brackets '[]'
 	* @return	string
 	*/
-	public function checkbox_input($field, $name)
+	public function checkbox_input($field='id', $name='ids')
 	{	
 		return '<input type="checkbox" name="'.$name.'[]" value="'.$this->id.'" />';
 	}
