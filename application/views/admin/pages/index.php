@@ -5,8 +5,14 @@
 	</div>
 
 	<div class="grid_20 table">
-	
-		<?=$table?>
+		
+		<form method="POST">
+		
+			<?=$table?>
+			
+			<button type="submit" name="delete_all" class="button">Delete Checked</button>
+			
+		</form>
 		
 	</div>
 	
