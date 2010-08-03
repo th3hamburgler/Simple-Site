@@ -25,7 +25,6 @@ class Partials extends SS_Admin_Controller {
 			// define table columns
 			$columns = array(
 				'name',
-				'slug',
 				'updated',
 				'Action' => anchor(
 					'admin/partials/update/{ID}',

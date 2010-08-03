@@ -29,6 +29,11 @@ if ( ! function_exists('zones'))
 {
 	function zones($partials)
 	{
+		// check we have partials
+		if(!$partials)
+			// return nbsp so we dont bust layout
+			return '&nbsp;';
+		
 		$content = array();
 		
 		foreach($partials as $partial)
