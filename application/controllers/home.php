@@ -119,7 +119,7 @@ class Home extends SS_Public_Controller {
 	*/
 	private function load_partials(&$page, $data)
 	{
-		// get template
+		// get template so we know the number of zones
 		$page->template->get();
 		
 		// loop through template zones
