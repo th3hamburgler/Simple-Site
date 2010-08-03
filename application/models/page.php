@@ -77,7 +77,17 @@ class Page extends DataMapper_Ext {
 			'rows'	=> 15,
 			'label' => 'Content',
 			'type'	=> 'textarea',
+		),
+		'content_order' => array(
+			'rules' => array(),
+			'label' => 'Content Order',
+			'type'	=> 'hidden',
 		),	
+		'content_zone' => array(
+			'rules' => array(),
+			'label' => 'Content Zone',
+			'type'	=> 'hidden',
+		),
 		'created' => array(
 			'description' => 'When the record was created',	
 			'label' => 'Created',
