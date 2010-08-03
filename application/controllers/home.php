@@ -17,15 +17,11 @@ class Home extends SS_Public_Controller {
 		$this->load->helper('page');
 			
 		if(!$slug)
-		{
 			// load the home page
 			$page = $this->site->home_page->get();
-		}
 		else
-		{
 			// load the page by slug
 			$page = $this->site->page->where('slug', $slug)->get();
-		}
 		
 		if($page->exists())
 		{
