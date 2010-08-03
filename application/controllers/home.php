@@ -7,7 +7,9 @@ class Home extends SS_Public_Controller {
 		$data = array();
 		
 		$data['site'] = $this->site;
-	
+		
+		$this->site_head();
+		
 		// load navigation
 		$data = $this->load_navigation($data);
 		
@@ -51,6 +53,28 @@ class Home extends SS_Public_Controller {
 			$method = NULL;
 	
 		$this->index($method);
+	}
+
+   /**
+	* Adds site common data to head element
+	*
+	* @access	public
+	* @param	void
+	* @return	void
+	*/
+	public function site_head()
+	{
+		// Set the doctype to XHTML Transitional
+        $this->wrapup->set_doctype('t');
+        
+        // meta charset
+        $this->wrapup->add_meta(array('http-equiv' =>'Content-type', 'content' => 'text/html;charset=UTF-8'));
+        
+        //$this->wrapup->add_meta(array('http-equiv' =>'X-UA-Compatible', 'content' => 'IE-8'));
+        
+        // Add CSS links
+        $this->wrapup->add_css('public/style.css', 'screen, print');
+        $this->wrapup->add_css('fancybox/jquery.fancybox-1.3.1.css', 'screen');
 	}
 
    /**
