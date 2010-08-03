@@ -43,7 +43,7 @@ if ( ! function_exists('zones'))
 				'id'	=> $partial->mkup_id()
 			);
 		
-			$content[] = div($partial->content, $spec);
+			$content[] = div($partial->content(), $spec);
 		}
 		
 		return implode("\n", $content);

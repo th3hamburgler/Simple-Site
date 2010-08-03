@@ -131,15 +131,24 @@ class Home extends SS_Public_Controller {
 			$partial_array = array();
 			
 			// loop throught partials
-			foreach($page_partials->all as $page_partial)
+			foreach($page_partials->all as $key => $page_partial)
 			{
+				//log_message('error', 'add partial '.$page_partial.' to '.$page_partial->order);
 				// get partials
-				$partial_array[] = $page_partial->partial->get();
+				$partial_array[$page_partial->order] = $page_partial->partial->get();
+			}
+			
+			// is the page content in this zone?
+			if($page->content_zone == $i)
+			{
+				//log_message('error', 'add content to partials at index '.$page->content_order);
+				$partial_array[$page->content_order] = $page;
 			}
 			
 			// pass zone partials to view
 			$data['zone_'.number_to_alphabet($i)] = $partial_array;
 		}
+		
 		
 		return $data;
 	}

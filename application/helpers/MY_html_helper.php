@@ -15,7 +15,65 @@
 
 // ------------------------------------------------------------------------
 
-     
+
+if ( ! function_exists('h1'))
+{
+   /**
+	* 	h1
+	*
+	* Generates an HTML h1 element
+	*
+	* @author    Jim Wardlaw
+	* @access    public
+	* @param     string
+	* @param     array
+	* @return    string
+	* @version   1.1
+	*/ 
+	function h1($contents, $attributes = NULL)
+    {
+    	return html_element('h1', $contents, $attributes);
+    }
+}
+if ( ! function_exists('h2'))
+{
+   /**
+	* h2
+	*
+	* Generates an HTML h2 element
+	*
+	* @author    Jim Wardlaw
+	* @access    public
+	* @param     string
+	* @param     array
+	* @return    string
+	* @version   1.1
+	*/ 
+	function h2($contents, $attributes = NULL)
+    {
+    	return html_element('h2', $contents, $attributes);
+    }
+}
+if ( ! function_exists('h3'))
+{
+   /**
+	* h3
+	*
+	* Generates an HTML h2 element
+	*
+	* @author    Jim Wardlaw
+	* @access    public
+	* @param     string
+	* @param     array
+	* @return    string
+	* @version   1.1
+	*/ 
+	function h3($contents, $attributes = NULL)
+    {
+    	return html_element('h3', $contents, $attributes);
+    }
+}
+    
 if ( ! function_exists('div'))
 {
    /**
@@ -23,7 +81,7 @@ if ( ! function_exists('div'))
 	*
 	* Generates an HTML div element
 	*
-	* @author    Bradford Mar
+	* @author    Jim Wardlaw
 	* @access    public
 	* @param     string
 	* @param     array
@@ -31,6 +89,27 @@ if ( ! function_exists('div'))
 	* @version   1.1
 	*/ 
 	function div($contents, $attributes = NULL)
+    {
+    	return html_element('div', $contents, $attributes);
+    }
+}
+
+if ( ! function_exists('html_element'))
+{
+   /**
+	* HTML Element
+	*
+	* Generates a generic HTML element
+	*
+	* @author    Jim Wardlaw
+	* @access    public
+	* @param     string
+	* @param     string
+	* @param     array
+	* @return    string
+	* @version   1.1
+	*/ 
+	function html_element($tag, $contents, $attributes = NULL)
     {
     	// Were any attributes submitted?  If so generate a string
 		if (is_array($attributes))
@@ -43,7 +122,7 @@ if ( ! function_exists('div'))
 			$attributes = $atts;
 		}
 		
-    	return "<div".$attributes.">".$contents."</div>";
+    	return "<".$tag.$attributes.">".$contents."</".$tag.">";
     }
 }
 

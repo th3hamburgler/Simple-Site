@@ -129,6 +129,18 @@ class Partial extends DataMapper_Ext {
 	
 		return implode(' ', $classes);
 	}
+    
+   /**
+	* method
+	*
+	* @access	public
+	* @param	void
+	* @return	void
+	*/
+	public function content()
+	{
+		return auto_typography(ascii_to_entities($this->content));
+	}
 }
 
 /* End of file partial.php */

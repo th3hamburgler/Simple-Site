@@ -130,6 +130,36 @@ class Page extends DataMapper_Ext {
 	{
 		return (string)$this->title;
     }
+
+   /**
+	* returns the unique markup id for this partial
+	*
+	* @access	public
+	* @return	string
+	*/
+	public function mkup_id()
+	{
+		return underscore($this->name);
+	}
+
+   /**
+	* returns the unique markup classes for this partial
+	*
+	* @access	public
+	* @return	string
+	*/
+	public function mkup_class()
+	{
+		$classes = array();
+		
+		// default content class
+		$classes[] = 'content';
+		
+		// add id as class
+		$classes[] = $this->mkup_id();
+	
+		return implode(' ', $classes);
+	}
     
    /**
 	* method
@@ -140,7 +170,7 @@ class Page extends DataMapper_Ext {
 	*/
 	public function content()
 	{
-		return auto_typography(ascii_to_entities($this->content));
+		return auto_typography(ascii_to_entities(h1($this->title).$this->content));
 	}
 }
 

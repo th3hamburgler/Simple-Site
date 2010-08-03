@@ -354,6 +354,67 @@ class Pages extends SS_Admin_Controller {
 			$new_form->button($spec);
 			
 			
+			
+			// check for post request
+			if($this->input->post('update_page'))
+			{
+				$page->content_zone = $this->input->post('content_zone');
+				
+				$page->content_order = $this->input->post('content_order');
+				
+				// save changes
+				if($page->save())
+				{
+					$this->oi->add_success('Page order updated');
+				}
+				else
+				{
+					$this->oi->add_success('Error updating Page order: '.$page->error->string);
+				}
+			}
+			
+			## New Partial Form ##
+			
+			$page_form = new GoodForm();
+			
+			// wrap form in fieldset
+			$page_form->fieldset('Content Position');
+						
+			// add dropdown to select zone
+			$spec = array(
+				'name'		=> 'content_zone',
+				'label'		=> 'Zone',
+				'options'	=> $template->zone_options(),
+				'value'		=> $page->content_zone,
+			);			
+			$page_form->dropdown($spec);
+			
+			
+			// add text to define order
+			$spec = array(
+				'name'		=> 'content_order',
+				'label'		=> 'Order',
+				'size'		=> 2,
+				'class'		=> 'small',
+				'value'		=> $page->content_order,
+			);			
+			$page_form->text($spec);
+			
+			// close fieldset
+			$page_form->close_fieldset();
+			
+			// add submit button
+			$spec = array(
+				'name'	=> 'update_page',
+				'value'	=> 'submit',
+				'text'	=> 'Save',
+				'class'	=> 'button submit'
+			);
+			$page_form->button($spec);
+			
+			
+			
+			
 			// check for post request
 			if($this->input->post('update_partials'))
 			{
@@ -479,6 +540,8 @@ class Pages extends SS_Admin_Controller {
 			$data['update_form'] 	= $update_form->generate(array('class' => 'update-partial-form'));
 			
 			$data['new_form'] 		= $new_form->generate();
+			
+			$data['page_form' ]		= $page_form->generate();
 		}
 		else
 		{

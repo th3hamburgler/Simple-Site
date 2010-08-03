@@ -3,23 +3,32 @@
 	<div class="grid_4 sub-nav page-nav" id="page-nav">
 		<? $this->load->view('admin/pages/nav')?>
 	</div>
+	
+	<div class="grid_20">
 
-	<div class="grid_10">
+		<div class="grid_20 alpha omega">
+			<h2>Update Page Zones</h2>
+		</div>
 		
-		<h2>Update Page Zones</h2>
+		<div class="clear"></div>
+	
+		<div class="grid_10 alpha">
+					
+			<?=$update_form?>
+			
+		</div>
 		
-		<?=$update_form?>
+		<div class="grid_10 omega">
+			
+			<?=$page_form?>
+			
+			<?=$new_form?>
+			
+		</div>
+		
+		<div class="clear"></div>
 		
 	</div>
-	
-	<div class="grid_10">
-		
-		<h2>Add New Partial to Zone</h2>
-		
-		<?=$new_form?>
-		
-	</div>
-	
-	<div class="clear"></div>
+
 
 <? $this->load->view('admin/common/footer')?>
