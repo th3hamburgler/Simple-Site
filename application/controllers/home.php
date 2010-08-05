@@ -70,7 +70,7 @@ class Home extends SS_Public_Controller {
         
         // Add CSS links
         $this->wrapup->add_css('public/style.css', 'screen, print');
-        $this->wrapup->add_css('fancybox/jquery.fancybox-1.3.1.css', 'screen');
+        $this->wrapup->add_css('public/fancybox/jquery.fancybox-1.3.1.css', 'screen');
 	}
 
    /**
@@ -144,6 +144,9 @@ class Home extends SS_Public_Controller {
 				//log_message('error', 'add content to partials at index '.$page->content_order);
 				$partial_array[$page->content_order] = $page;
 			}
+			
+			// sort array by key (order)
+			ksort($partial_array);
 			
 			// pass zone partials to view
 			$data['zone_'.number_to_alphabet($i)] = $partial_array;

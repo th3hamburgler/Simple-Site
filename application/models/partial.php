@@ -139,7 +139,7 @@ class Partial extends DataMapper_Ext {
 	*/
 	public function content()
 	{
-		return auto_typography(ascii_to_entities($this->content));
+		return $this->content;
 	}
 }
 

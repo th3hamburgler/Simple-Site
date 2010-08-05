@@ -10,6 +10,14 @@
 		
 		<div class="grid_10 alpha">
 		
+			<h4>Updates 0.12</h4>
+			
+			<h6>05/08/10</h6>
+		
+			<ol>
+				<li><b>Page</b> content is now treated as a partial and can be ordered and displayed in any of the templates zones</li>
+			</ol>
+		
 			<h4>Updates 0.11</h4>
 			
 			<h6>29/07/10</h6>
